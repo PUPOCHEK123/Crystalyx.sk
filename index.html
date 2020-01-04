@@ -127,45 +127,6 @@
 				<figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
 					<img src="img/macbook-pro.png" alt="">
 				</figure>
-
-			</div>
-		</div>
-	</section>
-	<!--main-section-end-->
-
-	<footer class="footer" id="footer">
-		<div class="container">
-			<div class="footer-logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
-			<span class="copyright">&copy; CS Cheat Check. All Rights Reserved</span>
-				<li class="twitter"><a href="https://www.youtube.com/channel/UCZYlptJ7SqWnb_sxDoQGc4w?view_as=subscriber"><i class="fa fa-telegram"></i></a></li>
-                                <li class="twitter"><a href=""><i class="fa fa-telegram"></i></a></li>
-			</ul>
-		</div>
-	</footer>
-
-
-	<script type="text/javascript">
-		$(window).load(function() {
-
-			$('.main-nav li a, .servicelink').bind('click', function(event) {
-				var $anchor = $(this);
-
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top - 102
-				}, 1500, 'easeInOutExpo');
-				/*
-				if you don't want to use the easing effects:
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top
-				}, 1000);
-				*/
-				if ($(window).width() < 768) {
-					$('.main-nav').hide();
-				}
-				event.preventDefault();
-			});
-		})
-	</script>
 <style>
 @keyframes rainbow-text {
   0% {
@@ -401,6 +362,45 @@ for ( var i = 0; i<1000; i++ ) {
 }
 document.getElementById("demo").innerHTML += rollDie();
 </script>
+
+			</div>
+		</div>
+	</section>
+	<!--main-section-end-->
+
+	<footer class="footer" id="footer">
+		<div class="container">
+			<div class="footer-logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
+			<span class="copyright">&copy; CS Cheat Check. All Rights Reserved</span>
+				<li class="twitter"><a href="https://www.youtube.com/channel/UCZYlptJ7SqWnb_sxDoQGc4w?view_as=subscriber"><i class="fa fa-telegram"></i></a></li>
+                                <li class="twitter"><a href=""><i class="fa fa-telegram"></i></a></li>
+			</ul>
+		</div>
+	</footer>
+
+
+	<script type="text/javascript">
+		$(window).load(function() {
+
+			$('.main-nav li a, .servicelink').bind('click', function(event) {
+				var $anchor = $(this);
+
+				$('html, body').stop().animate({
+					scrollTop: $($anchor.attr('href')).offset().top - 102
+				}, 1500, 'easeInOutExpo');
+				/*
+				if you don't want to use the easing effects:
+				$('html, body').stop().animate({
+					scrollTop: $($anchor.attr('href')).offset().top
+				}, 1000);
+				*/
+				if ($(window).width() < 768) {
+					$('.main-nav').hide();
+				}
+				event.preventDefault();
+			});
+		})
+	</script>
 
 </body>
 
