@@ -219,6 +219,9 @@ document.getElementById("demo").innerHTML += rollDie();
 			</ul>
 		</div>
 	</footer>
+<h2 class="box rainbow-text" id="demo" style="font-family: Montserrat; font-size: 50px; top: 10; left: 100; text-shadow: 1px 1px 0px, 0px 1px 0px, 1px 0px 1px, 0px 0px 1px, black;">Онлайн на сайте:&nbsp;</h2>
+<script>let nb_stops=10,dir="left";function SetupRainbow(){var e=GetRainbowString(nb_stops,80,50),t=".rainbowText {                 -webkit-background-clip: text;                 -webkit-text-fill-color: transparent;                 background-image: -webkit-linear-gradient("+dir+","+e+");                  background-image: linear-gradient(to "+("left"===dir?"right":"right"===dir?"left":"top"===dir?"bottom":"top")+","+e+")              }",n=document.createElement("style");n.type="text/css",n.styleSheet?n.styleSheet.cssText=t:n.appendChild(document.createTextNode(t)),document.head.appendChild(n)}function GetRainbowString(e,t,n){let r=360/e,i=[];for(let o=0;o<e;o++)i.push("hsl("+o*r+","+t+"%,"+n+"%)");return i.join()}function generateRainbowText(e){var t=e.innerText;e.innerHTML="";for(let n=0;n<t.length;n++){let r=document.createElement("span");r.style.color="hsl("+360*n/t.length+",80%,50%)",r.innerHTML=t[n],e.appendChild(r)}}function getRandomizer(e,t){return function(){return Math.floor(Math.random()*(1+t-e))+e}}window.addEventListener("load",function(){SetupRainbow()}),window.addEventListener("load",function(){var e=document.getElementsByClassName("rainbowText");for(let t=0;t<e.length;t++)generateRainbowText(e[t])});for(var rollDie=getRandomizer(100,200),results="",i=0;i<1e3;i++)results+=rollDie()+" ";document.getElementById("demo").innerHTML+=rollDie();
+
 
 
 	<script type="text/javascript">
@@ -243,8 +246,6 @@ document.getElementById("demo").innerHTML += rollDie();
 			});
 		})
 	</script>
-<h2 class="box rainbow-text" id="demo" style="font-family: Montserrat; font-size: 50px; top: 10; left: 100; text-shadow: 1px 1px 0px, 0px 1px 0px, 1px 0px 1px, 0px 0px 1px, black;">Онлайн на сайте:&nbsp;</h2>
-<script>let nb_stops=10,dir="left";function SetupRainbow(){var e=GetRainbowString(nb_stops,80,50),t=".rainbowText {                 -webkit-background-clip: text;                 -webkit-text-fill-color: transparent;                 background-image: -webkit-linear-gradient("+dir+","+e+");                  background-image: linear-gradient(to "+("left"===dir?"right":"right"===dir?"left":"top"===dir?"bottom":"top")+","+e+")              }",n=document.createElement("style");n.type="text/css",n.styleSheet?n.styleSheet.cssText=t:n.appendChild(document.createTextNode(t)),document.head.appendChild(n)}function GetRainbowString(e,t,n){let r=360/e,i=[];for(let o=0;o<e;o++)i.push("hsl("+o*r+","+t+"%,"+n+"%)");return i.join()}function generateRainbowText(e){var t=e.innerText;e.innerHTML="";for(let n=0;n<t.length;n++){let r=document.createElement("span");r.style.color="hsl("+360*n/t.length+",80%,50%)",r.innerHTML=t[n],e.appendChild(r)}}function getRandomizer(e,t){return function(){return Math.floor(Math.random()*(1+t-e))+e}}window.addEventListener("load",function(){SetupRainbow()}),window.addEventListener("load",function(){var e=document.getElementsByClassName("rainbowText");for(let t=0;t<e.length;t++)generateRainbowText(e[t])});for(var rollDie=getRandomizer(100,200),results="",i=0;i<1e3;i++)results+=rollDie()+" ";document.getElementById("demo").innerHTML+=rollDie();
 
 </body>
 
